@@ -1,4 +1,10 @@
 import { ApolloServer, gql } from "apollo-server";
+import pino from 'pino';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const logger = pino();
 
 const typeDefs = gql`
   type Query {
@@ -15,6 +21,8 @@ const server = new ApolloServer({
   }
 });
 
-server.listen().then(({ url }) => {
-  console.log(`🚀  Server ready at ${url}`);
+const PORT = process.env.PORT || 4000;
+
+server.listen(PORT).then(({ url }) => {
+  logger.info(`🚀  Server ready at ${url}`);
 });
