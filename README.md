@@ -26,6 +26,11 @@ Este projeto mostra como criar um servidor GraphQL utilizando as tecnologias men
 - [x] Pino
 - [x] GraphQL
 - [x] Apollo Server
+- [x] Jest
+- [x] Husky
+- [x] Eslint
+- [x] Prettier
+- [ ] SuperTest
 
 ### Instalação
 

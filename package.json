@@ -10,7 +10,8 @@
     "dev:watch": "swc src/server.ts -w -d dist --sync",
     "dev:server": "nodemon --exec swc-node -r dotenv/config src/server.ts | pino-pretty",
     "test": "jest --watchAll --detectOpenHandles --forceExit",
-    "test:coverage": "jest --watchAll --verbose --detectOpenHandles --forceExit --coverage"
+    "test:coverage": "jest --watchAll --verbose --detectOpenHandles --forceExit --coverage",
+    "prepare": "husky install"
   },
   "keywords": [
     "graphql",
@@ -27,9 +28,15 @@
   "devDependencies": {
     "@swc/cli": "^0.1.62",
     "@swc/core": "^1.3.56",
+    "@swc/jest": "^0.2.26",
     "@types/node": "^20.1.0",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
     "jest": "^29.5.0",
     "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
     "swc-node": "^1.0.0",
     "typescript": "^5.0.4"
   },
