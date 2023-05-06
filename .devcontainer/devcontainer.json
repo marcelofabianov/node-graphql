@@ -1,0 +1,35 @@
+{
+  "name": "Node.js with GraphQL",
+  "image": "marcelofabianov/node-zsh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "apollographql.vscode-apollo",
+        "orsenkucher.vscode-graphql",
+        "mquandalle.graphql",
+        "meta.relay",
+        "ms-azuretools.vscode-docker",
+        "Orta.vscode-jest",
+        "vespa-dev-works.jestRunIt",
+        "Prisma.prisma",
+        "humao.rest-client",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true
+        },
+        "editor.formatOnSave": true,
+        "[javascript]": {
+          "editor.formatOnSave": true
+        },
+        "[typescript]": {
+          "editor.formatOnSave": true
+        }
+      }
+    }
+  },
+  "postCreateCommand": "npm install"
+}

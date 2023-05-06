@@ -20,6 +20,7 @@ Este projeto mostra como criar um servidor GraphQL utilizando as tecnologias men
 - [x] Eslint
 - [x] Prettier
 - [x] Commitizen cs-cli
+- [x] DevContainer
 - [ ] SuperTest
 - [ ] Prisma PostgreSQL
 
