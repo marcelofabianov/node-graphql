@@ -18,7 +18,7 @@ const API_URL = process.env.API_URL || 'http://localhost';
 const logger: Logger = pino();
 
 async function main() {
-  const { url } = await startStandaloneServer(server, {
+  await startStandaloneServer(server, {
     context: async ({ req }) => ({ token: req.headers.token }),
     listen: { port: API_PORT },
   });
