@@ -9,7 +9,8 @@
     "dev": "swc src/server.ts --out-dir dist --source-maps",
     "dev:watch": "swc src/server.ts -w -d dist --sync",
     "dev:server": "nodemon --exec swc-node -r dotenv/config src/server.ts | pino-pretty",
-    "test": "jest --watchAll --detectOpenHandles --forceExit",
+    "test": "jest --forceExit",
+    "test:watch": "jest --watchAll --verbose --detectOpenHandles --forceExit",
     "test:coverage": "jest --watchAll --verbose --detectOpenHandles --forceExit --coverage",
     "prepare": "husky install"
   },
