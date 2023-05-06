@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install",
     "start:prod": "NODE_ENV=production nodemon --exec swc-node -r dotenv/config src/server.ts | pino-pretty --pretty --level=info",
     "build": "swc src -d dist",
     "build-dev": "npm run build && NODE_ENV=development node --inspect dist/server.js",
@@ -14,7 +13,10 @@
     "test:watch": "jest --watchAll --verbose --detectOpenHandles --forceExit",
     "test:coverage": "jest --verbose --detectOpenHandles --forceExit --coverage",
     "test:cov-watch": "jest --watchAll --verbose --detectOpenHandles --forceExit --coverage",
-    "commit": "git-cz"
+    "prepare": "husky install",
+    "commit": "git-cz",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint --ext .ts src --fix"
   },
   "keywords": [
     "graphql",
@@ -23,7 +25,6 @@
     "apollo-server",
     "nodemon",
     "pino",
-    "pino-pretty",
     "dotenv"
   ],
   "author": "Marcelo Fabiano",

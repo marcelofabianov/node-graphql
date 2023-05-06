@@ -9,7 +9,10 @@
     "project": "./tsconfig.json",
     "tsconfigRootDir": "."
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
   "rules": {
     "prettier/prettier": "error",
     "no-console": "error",
@@ -17,6 +20,6 @@
     "no-cond-assign": "error",
     "no-unused-vars": "error",
     "no-extra-semi": "error",
-    "semi": "error"
+    "semi": ["error", "always"]
   }
 }

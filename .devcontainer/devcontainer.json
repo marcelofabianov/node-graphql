@@ -15,7 +15,8 @@
         "vespa-dev-works.jestRunIt",
         "Prisma.prisma",
         "humao.rest-client",
-        "streetsidesoftware.code-spell-checker"
+        "streetsidesoftware.code-spell-checker",
+        "github.vscode-github-actions"
       ],
       "settings": {
         "editor.codeActionsOnSave": {

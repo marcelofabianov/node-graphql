@@ -1,6 +1,6 @@
-import { ApolloServer, gql } from "apollo-server";
-import pino from "pino";
-import dotenv from "dotenv";
+import { ApolloServer, gql } from 'apollo-server';
+import pino from 'pino';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -16,10 +16,10 @@ const server = new ApolloServer({
   typeDefs,
   resolvers: {
     Query: {
-      helloWorld: () => "Hello, world!",
+      helloWorld: () => 'Hello, world!',
     },
   },
-  cache: "bounded",
+  cache: 'bounded',
   persistedQueries: false,
 });
 
