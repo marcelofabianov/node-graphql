@@ -83,7 +83,9 @@ yarn-error.log*
 # Editor
 /.fleet
 /.idea
-/.vscode
+/.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
 *.sublime-workspace
 
 # Build

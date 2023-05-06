@@ -1,6 +1,6 @@
 import { ApolloServer, gql } from "apollo-server";
-import pino from 'pino';
-import dotenv from 'dotenv';
+import pino from "pino";
+import dotenv from "dotenv";
 
 dotenv.config();
 
@@ -10,17 +10,17 @@ const typeDefs = gql`
   type Query {
     helloWorld: String!
   }
-`
+`;
 
 const server = new ApolloServer({
   typeDefs,
   resolvers: {
     Query: {
-      helloWorld: () => "Hello, world!"
-    }
+      helloWorld: () => "Hello, world!",
+    },
   },
   cache: "bounded",
-  persistedQueries: false
+  persistedQueries: false,
 });
 
 const PORT = process.env.PORT || 4000;
