@@ -2,7 +2,15 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "ms-vscode-remote.remote-containers",
+    "apollographql.vscode-apollo",
+    "orsenkucher.vscode-graphql",
+    "mquandalle.graphql",
+    "meta.relay",
+    "ms-azuretools.vscode-docker",
+    "vespa-dev-works.jestRunIt",
+    "Prisma.prisma",
+    "humao.rest-client",
+    "streetsidesoftware.code-spell-checker",
     "github.vscode-github-actions"
   ]
 }
