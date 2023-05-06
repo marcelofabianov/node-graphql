@@ -28,7 +28,7 @@ Este projeto mostra como criar um servidor GraphQL utilizando as tecnologias men
 Para instalar o projeto, basta clonar o repositório e rodar o comando npm install na raiz do projeto.
 
 ```bash
-git clone https://github.com/marcelofabianov/node-graphQL-swc-nodemon-pino && npm install && chmod +x .husky/pre-commit
+git clone https://github.com/marcelofabianov/node-graphQL-swc-nodemon-pino && npm install
 ```
 
 ### Execução
@@ -44,6 +44,16 @@ Para rodar o servidor em modo de produção, basta rodar o comando npm start na 
 ```bash
 npm start:prod
 ```
+
+### Execução dos testes
+
+Para rodar os testes, basta rodar o comando npm run test na raiz do projeto.
+
+```bash
+npm run test
+```
+
+ou npm run test:watch ou test:coverage ou test:cov-watch
 
 ### Contribuição
 

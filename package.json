@@ -12,7 +12,8 @@
     "dev:server": "nodemon --exec swc-node -r dotenv/config src/server.ts | pino-pretty",
     "test": "jest --forceExit",
     "test:watch": "jest --watchAll --verbose --detectOpenHandles --forceExit",
-    "test:coverage": "jest --watchAll --verbose --detectOpenHandles --forceExit --coverage"
+    "test:coverage": "jest --verbose --detectOpenHandles --forceExit --coverage",
+    "test:cov-watch": "jest --watchAll --verbose --detectOpenHandles --forceExit --coverage"
   },
   "keywords": [
     "graphql",
