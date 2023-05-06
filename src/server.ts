@@ -8,19 +8,32 @@ const logger = pino();
 
 const typeDefs = gql`
   type Query {
-    helloWorld: String!
+    getEmails: [String!]!
+  }
+  type Mutation {
+    addEmail(email: String!): String!
   }
 `;
 
+const emails: string[] = [];
+
 const server = new ApolloServer({
   typeDefs,
-  resolvers: {
-    Query: {
-      helloWorld: () => 'Hello, world!',
-    },
-  },
   cache: 'bounded',
   persistedQueries: false,
+  resolvers: {
+    Query: {
+      getEmails: () => emails,
+    },
+    Mutation: {
+      addEmail: (_, { email }) => {
+        emails.push(email);
+        logger.info(`Added email: ${email}`);
+
+        return email;
+      },
+    },
+  },
 });
 
 const PORT = process.env.PORT || 4000;

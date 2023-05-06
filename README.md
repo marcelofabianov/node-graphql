@@ -21,6 +21,7 @@ Este projeto mostra como criar um servidor GraphQL utilizando as tecnologias men
 - [x] Prettier
 - [x] Commitizen cs-cli
 - [x] DevContainer
+- [x] Github Actions
 - [ ] SuperTest
 - [ ] Prisma PostgreSQL
 
