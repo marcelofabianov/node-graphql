@@ -32,7 +32,7 @@ Este projeto mostra como criar um servidor GraphQL utilizando as tecnologias men
 Para instalar o projeto, basta clonar o repositório e rodar o comando npm install na raiz do projeto.
 
 ```bash
-git clone https://github.com/marcelofabianov/node-graphQL-swc-nodemon-pino && rm -rf .git && npm install
+git clone https://github.com/marcelofabianov/node-graphQL-swc-nodemon-pino && npm install
 ```
 
 ### Execução
