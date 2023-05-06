@@ -57,13 +57,15 @@ ou npm run test:watch ou test:coverage ou test:cov-watch
 
 ### Uso
 
-Para utilizar o servidor, basta acessar o endereço http://localhost:4000/graphql e utilizar o playground do GraphQL para fazer as requisições.
+Para utilizar o servidor, basta acessar o endereço http://localhost:4000 e utilizar o playground do GraphQL para fazer as requisições.
 
-### Contribuição
+### Dicas
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou pull request no repositório.
+Se você utiliza o VSCODE criei o ambiente de devcontainer para padronizar e facilitar o desenvolvimento.
 
-Commits: Todo e qualquer commit deve ter uma mensagem de commit válida, seguindo o padrão do Commitizen. Para isso, basta rodar o comando npm run commit na raiz do projeto e seguir as instruções.
+### Politicas de versonamento
+
+Todo e qualquer commit deve ter uma mensagem de commit válida, seguindo o padrão do Commitizen. Para isso, basta rodar o comando npm run commit na raiz do projeto e seguir as instruções.
 
 Exemplo:
 
