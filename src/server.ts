@@ -1,43 +1,30 @@
-import { ApolloServer, gql } from 'apollo-server';
-import pino from 'pino';
 import dotenv from 'dotenv';
+import pino, { Logger } from 'pino';
+import { ApolloServer } from '@apollo/server';
+import { startStandaloneServer } from '@apollo/server/standalone';
+import { typeDefs } from './schemas';
+import { resolvers } from './resolvers';
 
 dotenv.config();
 
-const logger = pino();
-
-const typeDefs = gql`
-  type Query {
-    getEmails: [String!]!
-  }
-  type Mutation {
-    addEmail(email: String!): String!
-  }
-`;
-
-const emails: string[] = [];
-
 const server = new ApolloServer({
   typeDefs,
-  cache: 'bounded',
-  persistedQueries: false,
-  resolvers: {
-    Query: {
-      getEmails: () => emails,
-    },
-    Mutation: {
-      addEmail: (_, { email }) => {
-        emails.push(email);
-        logger.info(`Added email: ${email}`);
-
-        return email;
-      },
-    },
-  },
+  resolvers,
 });
 
-const PORT = process.env.PORT || 4000;
+const API_PORT = parseInt(process.env.API_PORT || '4000');
+const API_URL = process.env.API_URL || 'http://localhost';
 
-server.listen(PORT).then(({ url }) => {
-  logger.info(`🚀  Server ready at ${url}`);
-});
+const logger: Logger = pino();
+
+async function main() {
+  const { url } = await startStandaloneServer(server, {
+    context: async ({ req }) => ({ token: req.headers.token }),
+    listen: { port: API_PORT },
+  });
+
+  logger.info(`🚀 Server ready`);
+  logger.info(`Query at: ${API_URL}:${API_PORT}`);
+}
+
+main();

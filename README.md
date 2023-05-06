@@ -14,13 +14,12 @@ Este projeto mostra como criar um servidor GraphQL utilizando as tecnologias men
 - [x] Nodemon
 - [x] Pino
 - [x] GraphQL
-- [x] Apollo Server
+- [x] Apollo Server 4
 - [x] Jest
 - [x] Husky
 - [x] Eslint
 - [x] Prettier
 - [x] Commitizen cs-cli
-- [x] DevContainer
 - [x] Github Actions
 - [ ] SuperTest
 - [ ] Prisma PostgreSQL
@@ -61,13 +60,9 @@ ou npm run test:watch ou test:coverage ou test:cov-watch
 
 Para utilizar o servidor, basta acessar o endereço http://localhost:4000 e utilizar o playground do GraphQL para fazer as requisições.
 
-### Dicas
-
-Se você utiliza o VSCODE criei o ambiente de devcontainer para padronizar e facilitar o desenvolvimento.
-
 ### Politicas de versonamento
 
-Todo e qualquer commit deve ter uma mensagem de commit válida, seguindo o padrão do Commitizen. Para isso, basta rodar o comando npm run commit na raiz do projeto e seguir as instruções.
+Este projeto esta seguindo as convenções de "Conventional Commits". Para facilitar o uso destas convenções, o Commitizen foi adicionado ao projeto. Para fazer um commit, basta rodar o comando npm run commit na raiz do projeto.
 
 Exemplo:
 
