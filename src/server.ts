@@ -18,7 +18,9 @@ const server = new ApolloServer({
     Query: {
       helloWorld: () => "Hello, world!"
     }
-  }
+  },
+  cache: "bounded",
+  persistedQueries: false
 });
 
 const PORT = process.env.PORT || 4000;

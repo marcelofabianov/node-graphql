@@ -8,9 +8,9 @@
     "dev": "swc src/server.ts --out-dir dist --source-maps",
     "dev:watch": "swc src/server.ts -w -d dist --sync",
     "dev:server": "nodemon --exec swc-node -r dotenv/config src/server.ts | pino-pretty",
-    "start": "npm run build && NODE_ENV=production node dist/server.js"
+    "start:prod": "NODE_ENV=production nodemon --exec swc-node -r dotenv/config src/server.ts | pino-pretty --pretty --level=info"
   },
-  "keywords": [],
+  "keywords": ["graphql", "typescript", "swc", "apollo-server", "nodemon", "pino", "pino-pretty", "dotenv"],
   "author": "Marcelo Fabiano",
   "license": "MIT",
   "devDependencies": {
