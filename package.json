@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install",
     "start:prod": "NODE_ENV=production nodemon --exec swc-node -r dotenv/config src/server.ts | pino-pretty --pretty --level=info",
     "build": "swc src -d dist",
     "build-dev": "npm run build && NODE_ENV=development node --inspect dist/server.js",
@@ -11,8 +12,7 @@
     "dev:server": "nodemon --exec swc-node -r dotenv/config src/server.ts | pino-pretty",
     "test": "jest --forceExit",
     "test:watch": "jest --watchAll --verbose --detectOpenHandles --forceExit",
-    "test:coverage": "jest --watchAll --verbose --detectOpenHandles --forceExit --coverage",
-    "prepare": "husky install"
+    "test:coverage": "jest --watchAll --verbose --detectOpenHandles --forceExit --coverage"
   },
   "keywords": [
     "graphql",
@@ -31,6 +31,7 @@
     "@swc/core": "^1.3.56",
     "@swc/jest": "^0.2.26",
     "@types/node": "^20.1.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -47,5 +48,10 @@
     "graphql": "^16.6.0",
     "pino": "^8.12.1",
     "pino-pretty": "^10.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

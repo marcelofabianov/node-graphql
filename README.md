@@ -1,6 +1,6 @@
 # Node GraphQL
 
-Este é um exemplo de como utilizar GraphQL com TypeScript e outras tecnologias
+Este é um exemplo de como utilizar GraphQL com Node e outras tecnologias
 
 ### Sobre
 
@@ -20,6 +20,7 @@ Este projeto mostra como criar um servidor GraphQL utilizando as tecnologias men
 - [x] Eslint
 - [x] Prettier
 - [ ] SuperTest
+- [ ] Prisma
 
 ### Instalação
 
