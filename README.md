@@ -64,3 +64,22 @@ Para utilizar o servidor, basta acessar o endereço http://localhost:4000/graphq
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou pull request no repositório.
 
 Commits: Todo e qualquer commit deve ter uma mensagem de commit válida, seguindo o padrão do Commitizen. Para isso, basta rodar o comando npm run commit na raiz do projeto e seguir as instruções.
+
+Exemplo:
+
+```bash
+git add . && npm run commit
+```
+
+Para saber mais sobre o Commitizen, acesse:
+
+- https://github.com/commitizen/cz-cli
+
+Para saber sobre o padrao de commits utilizado, acesse:
+
+- https://www.conventionalcommits.org/en/v1.0.0/
+
+Extra:
+
+- https://semver.org/
+- https://www.npmjs.com/package/husky
