@@ -13,7 +13,8 @@
     "test": "jest --forceExit",
     "test:watch": "jest --watchAll --verbose --detectOpenHandles --forceExit",
     "test:coverage": "jest --verbose --detectOpenHandles --forceExit --coverage",
-    "test:cov-watch": "jest --watchAll --verbose --detectOpenHandles --forceExit --coverage"
+    "test:cov-watch": "jest --watchAll --verbose --detectOpenHandles --forceExit --coverage",
+    "commit": "git-cz"
   },
   "keywords": [
     "graphql",
