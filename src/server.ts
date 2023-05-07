@@ -2,8 +2,8 @@ import dotenv from 'dotenv';
 import pino, { Logger } from 'pino';
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
-import { typeDefs } from './schemas';
-import { resolvers } from './resolvers';
+import { typeDefs } from './graphql/schemas';
+import { resolvers } from './graphql/resolvers';
 
 dotenv.config();
 
