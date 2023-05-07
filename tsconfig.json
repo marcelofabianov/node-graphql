@@ -9,9 +9,10 @@
     "skipLibCheck": true,
     "baseUrl": "./src",
     "outDir": "./dist",
-    // "paths": {
-    //   "@customer/*": ["customer/*"]
-    // }
+    "typeRoots": [
+      "./_types",
+      "./node_modules/@types"
+    ],
   },
   "include": [
     "./src/**/*",

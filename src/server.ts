@@ -12,8 +12,8 @@ const server = new ApolloServer({
   resolvers,
 });
 
-const API_PORT = parseInt(process.env.API_PORT || '4000');
 const API_URL = process.env.API_URL || 'http://localhost';
+const API_PORT = parseInt(process.env.API_PORT || '4000');
 
 const logger: Logger = pino();
 
@@ -23,8 +23,7 @@ async function main() {
     listen: { port: API_PORT },
   });
 
-  logger.info(`🚀 Server ready`);
-  logger.info(`Query at: ${API_URL}:${API_PORT}`);
+  logger.info(`🚀 Server ready: ${API_URL}:${API_PORT}`);
 }
 
 main();
